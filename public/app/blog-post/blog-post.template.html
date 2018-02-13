@@ -1,0 +1,42 @@
+<div class="col s12 m12 l9">
+  <div class="blog-post">
+    <h4 class="title">{{$ctrl.post.title}}</h4>
+    <span style="font-size: 12px;">{{$ctrl.formatDate($ctrl.post.createdDate, 'ddMMMMyyyy')}},</span>
+    <span style="font-size: 12px;">Posted by {{$ctrl.post.author}}</span>
+    <span style="font-size: 12px; float: right; cursor: pointer;" title="Update Post" data-target="#updatePostModal">
+        <a class="waves-effect waves-light btn-flat modal-trigger" href="#updatePostModal"><i class="fa fa-edit" aria-hidden="true"></i> Update
+        </a>
+    </span><br>
+    <img ng-src="{{$ctrl.getImageSource($ctrl.post.coverImage)}}" alt="{{$ctrl.post.title}}" style="width: 100%">
+    <h5><b>{{$ctrl.post.shortDescription}}</b></h5>
+    <p style="text-align: justify;">{{$ctrl.post.description}}</p>
+  </div>
+</div>
+<div id="updatePostModal" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h4><i class="fa fa-edit" aria-hidden="true"></i> Update Post...</h4>
+    <form class="col s12" ng-submit="$ctrl.createPost(blogPost)">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="blog_title" type="text" name="title" ng-model="$ctrl.post.title">
+                <label for="blog_title" class="active">Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="blog_short_desc" class="materialize-textarea" name="shortDescription" ng-model="$ctrl.post.shortDescription"></textarea>
+                <label for="blog_short_desc" class="active">Short Description</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="blog_desc" class="materialize-textarea" name="description" ng-model="$ctrl.post.description"></textarea>
+                <label for="blog_desc" class="active">Description</label>
+            </div>
+        </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="center modal-action modal-close waves-effect waves-black btn white black-text" ng-click="$ctrl.updatePost($ctrl.post)">Update Post</a>
+  </div>
+</div>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="blogApp">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>SH Blog</title>
+
+    <!-- CSS  -->
+    <link href="./css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="./css/dropzone.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="./icons/css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <!--  Scripts-->
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/angular/angular.min.js"></script>
+    <script src="/angular-route/angular-route.min.js"></script>
+    <script src="/materialize-css/js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="directives/file-model/file-model.module.js"></script>
+    <script src="directives/file-model/file-model.directive.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="blog-home/blog-home.module.js"></script>
+    <script src="blog-home/blog-home.component.js"></script>
+    <script src="blog-posts/blog-posts.module.js"></script>
+    <script src="blog-posts/blog-posts.component.js"></script>
+    <script src="blog-post/blog-post.module.js"></script>
+    <script src="blog-post/blog-post.component.js"></script>
+    <script src="create-post/create-post.module.js"></script>
+    <script src="create-post/create-post.component.js"></script>
+</head>
+
+<body>
+    <!-- Header contains the logo and the menu options  -->
+    <header>
+        <div class="container hide-on-med-and-down">
+            <div class="row valign-wrapper">
+                <div class="col l2">
+                    <div class="row" style="padding-top: 20px;">
+                        <div class="col l1">
+                        </div>
+                        <div class="col l2">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="col l2">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                        <div class="col l2">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </div>
+                        <div class="col l2">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                        <div class="col l2">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </div>
+                        <div class="col l1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col l1">
+                </div>
+                <div class="col l6">
+                    <div class="row">
+                        <div class="col l2"></div>
+                        <div class="col l2 center">
+                            <br>
+                            <br>
+                            <img src="logo.png" alt="logo" style="width: 70%; height: 50%;">
+                        </div>
+                        <div class="col l6 left">
+                            <br>
+                            <h3>SH Blog</h3>
+                        </div>
+                        <div class="col l2"></div>
+                    </div>
+                </div>
+                <div class="col l3"></div>
+            </div>
+        </div>
+        <nav class="grey darken-4 main-nav">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo hide-on-large-only">SH Blog</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+                <ul class="center hide-on-med-and-down" style="padding-left: 11%">
+                    <li><a href="sass.html">HOME</a></li>
+                    <li><a href="sass.html">NEWS</a></li>
+                    <li><a href="badges.html">POLITICS</a></li>
+                    <li><a href="collapsible.html">ANALYTICS</a></li>
+                    <li><a href="mobile.html">BUSINESS</a></li>
+                    <li><a href="#!/category/entertainment">ENTERTAINMENT</a></li>
+                    <li><a href="mobile.html">TRAVEL</a></li>
+                    <li><a href="mobile.html">CRICKET</a></li>
+                    <li><a href="mobile.html">LIFESTYLE</a></li>
+                    <li><a href="mobile.html">HEALTH</a></li>
+                    <li><a href="mobile.html">FOOD</a></li>
+                    <li><a href="mobile.html">TECH</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="sass.html">HOME</a></li>
+                    <li><a href="sass.html">NEWS</a></li>
+                    <li><a href="badges.html">POLITICS</a></li>
+                    <li><a href="collapsible.html">ANALYTICS</a></li>
+                    <li><a href="mobile.html">BUSINESS</a></li>
+                    <li><a href="mobile.html">ENTERTAINMENT</a></li>
+                    <li><a href="mobile.html">TRAVEL</a></li>
+                    <li><a href="mobile.html">CRICKET</a></li>
+                    <li><a href="mobile.html">LIFESTYLE</a></li>
+                    <li><a href="mobile.html">HEALTH</a></li>
+                    <li><a href="mobile.html">FOOD</a></li>
+                    <li><a href="mobile.html">TECH</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End of header -->
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div ng-view></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row center">
+                <div class="col s12">
+                    <div class="col s1">
+                    </div>
+                    <div class="col s2">
+                        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col s2">
+                        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col s2">
+                        <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col s2">
+                        <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col s2">
+                        <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col s1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright center">
+            <div class="container">
+                Copyright &copy; 2017 . SH Blog . All rights reserved
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
