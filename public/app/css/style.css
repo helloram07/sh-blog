@@ -1,0 +1,149 @@
+/* Custom Stylesheet */
+
+@import '/materialize-css/css/materialize.min.css';
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:500');
+html {
+    font-family: 'Work Sans', sans-serif;
+}
+.icon-block {
+    padding: 0 15px;
+}
+.icon-block .material-icons {
+    font-size: inherit;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+.category-header {
+    border-bottom: 2px solid #bf0000;
+    margin-bottom: 15px;
+}
+.blog-post h5.title:hover {
+    cursor: pointer;
+    color: #bf0000;
+}
+.headlines h6.title {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    font-weight: 900;
+}
+.headlines ul.headlines-list > li {
+    margin-top: 20px;
+}
+.headlines ul.headlines-list > li:hover {
+    color: #bf0000;
+    cursor: pointer;
+}
+nav.main-nav ul a:hover {
+    border-bottom: 2px solid #bf0000;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+i.fa-facebook:hover {
+    cursor: pointer;
+    color: #3b5998;
+}
+i.fa-instagram:hover {
+    cursor: pointer;
+    color: #fb3958;
+}
+i.fa-linkedin:hover {
+    cursor: pointer;
+    color: #0077B5;
+}
+i.fa-twitter:hover {
+    cursor: pointer;
+    color: #00aced;
+}
+i.fa-youtube:hover {
+    cursor: pointer;
+    color: #FF0000;
+}
+.single-latest-news {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.single-latest-news h6 {
+    font-weight: 800;
+}
+.single-latest-news p {
+    font-size: 12px;
+}
+.other-latest-news-list .other-latest-news {
+    display: inline-flex;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+.other-latest-news-list .other-latest-news .post-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+.other-latest-news-list .other-latest-news .latest-post {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+    z-index: 1;
+    flex: 1 1 0;
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* label color */
+
+.input-field label {
+    color: #000 !important;
+}
+
+/* label focus color */
+
+.input-field input[type=text]:focus + label,
+.input-field textarea:focus + label {
+    color: #bf0000 !important;
+}
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus,
+.input-field textarea:focus {
+    border-bottom: 1px solid #bf0000 !important;
+    box-shadow: 0 1px 0 0 #bf0000 !important;
+}
+
+/* valid color */
+
+.input-field input[type=text].valid,
+.input-field textarea.valid {
+    border-bottom: 1px solid #000 !important;
+    box-shadow: 0 1px 0 0 #000 !important;
+}
+
+/* invalid color */
+
+.input-field input[type=text].invalid,
+.input-field textarea.invalid {
+    border-bottom: 1px solid #bf0000 !important;
+    box-shadow: 0 1px 0 0 #bf0000 !important;
+}
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: #bf0000 !important;
+}
+.dropdown-content li>span {
+    color: #bf0000 !important;
+}
